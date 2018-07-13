@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 68.3rem;
+    height: 38.4rem;
+}
+
+.clickable {
+    cursor: pointer !important;
+}
+
+.clickdisable {
+    cursor: not-allowed !important;
+}
+
+
+/*全局样式*/
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.row .col {
+    width: 100%;
+}
+
+.table {
+    text-align: center !important;
+    background-color: transparent;
+}
+
+.table th {
+    text-align: center !important;
+    background-color: #fff;
+    font-size: 0.7rem;
+    color: #323437;
+}
+
+.table tr,
+.table td {
+    text-align: center !important;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 0.7rem;
+    color: #626262;
+    border-bottom: 1px solid #ddd;
+}
+
+.table th,
+.table td {
+    min-width: 2rem;
+    max-width: 5rem;
+}
+
+.table .operating {}
+
+.table .operating .item {
+    font-size: 0.7rem !important;
+    padding: 0.1rem;
+}
+
+
+/*  输入框白色提示文字 */
+
+.phwhite input::-webkit-input-placeholder {
+    color: #fff !important;
+}
+
+.phwhite input::-moz-placeholder {
+    color: #fff !important;
+    opacity: 1 !important;
+}
+
+.inputfontwhite input {
+    color: #fff !important;
+}
+
+
+/*---去除input number的箭头按钮---*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: textfield;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.clickable {
+    /*可点击*/
+    cursor: pointer !important;
+}
+
+.disable {
+    /*不可操作*/
+    cursor: no-drop !important;
+    background-color: rgb(153, 153, 153);
+}
+
+
+/* 按钮颜色 */
+
+.greenbt {
+    background: #03c6d7;
+}
+
+.greenbt:hover,
+.greenbt:focus {
+    background: #03c6d7;
+}
+
+.redbt {
+    background: #f56e6a
+}
+
+.redbt:hover,
+.redbt:focus {
+    background: #f56e6a
+}
+
+.bluebt {
+    background: #4da7fd;
+}
+
+.bluebt:hover,
+.bluebt:focus {
+    background: #4da7fd;
+}
+
+.black_bg {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0rem;
+    top: 0rem;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 过渡动画 */
+
+.list-enter-active,
+.list-leave-active {
+    transition: transform 0.5s;
+}
+
+.list-enter {
+    /* opacity: 0; */
+    transform: translateX(100%);
+}
+
+.list-leave-to {
+    transform: translateX(-100%);
+    /* opacity: 0;
+    transform: translateX(-25%) */
+}
+
+
+/* .list-move {
+    transition: transform 1s;
+    opacity: 0;
+    transform: translateX(-25%)
+} */
