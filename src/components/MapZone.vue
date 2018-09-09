@@ -68,6 +68,14 @@
 				return new Promise((resolve, reject) => {
 					http.get(url.GRTCAMERA).then(res => {
 						this.mapdata = res.data
+						var cameras = this.mapdata.camera
+						var domain = document.domain;
+						for (var i=0;i<cameras.length;i++)
+						{ 
+							cameras[i].url = cameras[i].url.replace(/nginx/, domain)
+							console.info(cameras[i].url)
+						}
+						
 						resolve(this.mapdata)
 					}).catch(err => {
 						reject(err)
