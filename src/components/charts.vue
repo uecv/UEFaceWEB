@@ -1,8 +1,8 @@
 <template>
-   <!-- <div v-show="show" class="charts" ref="chart">
-  </div>  -->
-   <div class="charts" ref="chart">
-  </div> 
+  <!-- <div v-show="show" class="charts" ref="chart">
+    </div>  -->
+  <div class="charts" ref="chart">
+  </div>
 </template>
 
 <script>
@@ -31,35 +31,36 @@
           }
         }
       },
-      show:{
-        type:Boolean,
-        default:false
+      show: {
+        type: Boolean,
+        default: false
       }
     },
     data() {
       return {
         name: 'chart',
-        myChart:{},
+        myChart: {},
         chartoption: {}
       }
     },
     watch: { //嵌套过深的对象无法监听除非深度监听 耗性能不推荐 不知是否是存在数组的问题 最好发新的整个对象过来
       option: function(value) {
         //监听option配置
-         //console.log(value)
+        //console.log(value)
         this.chartreload(value)
       },
-      show:function(val){
+      show: function(val) {
         // console.log(val)
         //显示时重置大小免得大小有问题
-        this.myChart.resize();
+        // this.myChart.resize();
       }
     },
     methods: {
       chartreload: function(option) {
         //重新加载图表
-        
+        console.info('显示')
         this.myChart.setOption(option);
+        this.myChart.resize();
       }
     },
     // computed:{
@@ -69,13 +70,14 @@
     // },
     mounted() {
       //组件挂载后
-       console.log(this)
-       this.myChart = echarts.init(this.$refs.chart);
-      // this.chartreload(this.option)
+      // console.log('图表',this)
+      this.myChart = echarts.init(this.$refs.chart);
+      this.chartreload(this.option)
     },
     updated() {
       //数据更新后
-       console.log(this.option)
+      console.log(this.option)
+        // this.myChart.resize();
     }
   }
 </script>
@@ -83,7 +85,8 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .charts {
-    width: 100%;
-    height: 100%;
+      width: 100%;
+      height: 100%;
+    /* height: 9rem; */
   }
 </style>

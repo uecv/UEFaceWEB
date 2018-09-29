@@ -20,7 +20,7 @@ export default {
 
     today: function() {
         //今天
-        return moment().format('Y-M-D')
+        return moment().format('YYYY-MM-DD')
     },
     yesterday: function() {
         //昨天

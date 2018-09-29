@@ -35,7 +35,7 @@ module.exports = {
             // 测试服务器代理配置
             '/api': { // api是代理根地址
                 // target: 'http://localhost:6002', //内部地址
-                target: 'http://192.168.0.245', //外部地址
+                target: 'http://192.168.1.117:5000', //外部地址
                 changeOrigin: true,
                 pathRewrite: {
                     '^/api': '' // api在代理时转义成空字符

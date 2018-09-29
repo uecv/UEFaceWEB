@@ -5,11 +5,12 @@ import { Message } from 'element-ui';
 import VueRouter from 'vue-router' // vue路由
 import Cookies from 'js-cookie'
 import { home_route } from './home_route'
-
+import { statistics_route } from './statistics_route'
 
 
 const routes = [
     home_route,
+    statistics_route,
     { path: '*', redirect: '/home' }
 ]
 

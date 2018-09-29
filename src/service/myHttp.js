@@ -105,7 +105,7 @@ function err_dispose(err) {
 
 // }
 
-//import qs from 'qs'; //请求参数处理库
+import qs from 'qs'; //请求参数处理库
 import axios from 'axios' //请求库
 //axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'; //请求头
 axios.defaults.withCredentials = true, // 跨域凭证获取
@@ -148,10 +148,10 @@ export default {
             // })
 
             //get请求
-            axios.post(url, info, { //qs序列化参数 做成stringformdate格式(java后台需要)
+            axios.post(url, qs.stringify(info), { //qs序列化参数 做成stringformdate格式(java后台需要)
                 headers: { //头部配置
-                    'Accept': 'application/json, text/javascript, */*; q=0.01',
-                    // 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' //(java后台需要)
+                    // 'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' //(java后台需要)
                 },
                 // params: info,
                 // paramsSerializer: function(params) {
