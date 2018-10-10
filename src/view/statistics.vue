@@ -42,7 +42,7 @@
 				<!--识别人数-->
 				<div class="col identifyNum">
 					<div class="Zone">
-						<h3></h3>
+						<h3><button class="swichpage" @click="$router.push('/home')">返回首页</button></h3>
 						<div class="content">
 							<div class="sum">
 								<img src="../img/人脸识别.png" alt="">
@@ -114,7 +114,6 @@
 				let dateArry = [] //日期数组
 				let knows = [] //匹配数组
 				let notknows = [] //不匹配数组
-				
 				if (this.lastweekdata.know) {
 					Object.keys(this.lastweekdata.know).forEach(key => {
 						dateArry.push(key)
@@ -371,7 +370,7 @@
 		background-color: #f0f4fd;
 	}
 	.statistics .body {
-		padding: 0.8rem 1.5rem;
+		padding: 0rem 1.5rem;
 	}
 	/* ----- */
 	.Top_nav {
@@ -509,6 +508,7 @@
 		margin-right: -30px;
 	}
 	.Zone h3 {
+		position: relative;
 		/* padding-left: 1.5rem; */
 		text-align: left;
 		height: 2rem;
@@ -543,11 +543,11 @@
 		box-shadow: 0 0 1rem #ddd;
 	}
 	/* .contentResult {
-																													margin-left: 20px;
-																													padding: 5px;
-																													border-radius: 0.4rem;
-																													background-color: #FFFFFF;
-																												} */
+																														margin-left: 20px;
+																														padding: 5px;
+																														border-radius: 0.4rem;
+																														background-color: #FFFFFF;
+																													} */
 	span {
 		cursor: pointer;
 	}

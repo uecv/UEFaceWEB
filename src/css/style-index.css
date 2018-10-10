@@ -173,3 +173,17 @@ input[type="number"] {
     opacity: 0;
     transform: translateX(-25%)
 } */
+
+.swichpage {
+    position: absolute;
+    right: 0.3rem;
+    top: 0.3rem;
+    border: 0;
+    outline: 0;
+    padding: 0.2rem;
+    background: #4fa0f2;
+    color: #fff;
+    font-size: 0.65rem;
+    border-radius: 4px;
+    cursor: pointer;
+}

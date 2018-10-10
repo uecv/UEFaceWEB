@@ -26,7 +26,10 @@
 				<!--PicZone-->
 				<div class="col cameraMap">
 					<div class="Zone">
-						<h3>园区平面图</h3>
+						<h3>
+							园区平面图
+							<button class="swichpage" @click="$router.push('/statistics')">数据统计</button>
+						</h3>
 						<div class="content">
 							<MapZone @camerachange="camerachange"></MapZone>
 						</div>
@@ -165,6 +168,7 @@
 		align-items: center;
 	}
 	.Zone h3 span {
+		position: relative;
 		border: 1px solid #4fa0f2;
 		border-radius: 5px;
 		color: #FFFFFF;
