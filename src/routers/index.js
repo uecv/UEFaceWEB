@@ -1,6 +1,6 @@
 // 根路由配置
 import url from 'service/url'
-import http from 'service/myhttp'
+import http from 'service/myHttp'
 import { Message } from 'element-ui';
 import VueRouter from 'vue-router' // vue路由
 import Cookies from 'js-cookie'

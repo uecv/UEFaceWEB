@@ -1,5 +1,5 @@
 var domain = document.domain;
-// export const HOST = '' // 本地代理请求路径
+//export const HOST = '' // 本地代理请求路径
 export const HOST = '/api' // 本地代理请求路径
     // export const HOST = 'http://192.168.0.245' // 公司服务器
     // export const HOST = 'http://183.3.139.134:6004' //外部服务器
